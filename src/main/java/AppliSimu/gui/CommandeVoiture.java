@@ -1,4 +1,4 @@
-package AppliSimu;
+package AppliSimu.gui;
 
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;

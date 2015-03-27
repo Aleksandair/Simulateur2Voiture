@@ -3,6 +3,7 @@ package AppliSimu;
 
 import static org.junit.Assert.*;
 
+import AppliSimu.gui.IHMVoiture;
 import org.junit.Before;
 import org.junit.Test;
 

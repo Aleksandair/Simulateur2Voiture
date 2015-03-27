@@ -1,18 +1,11 @@
-package AppliSimu;
+package AppliSimu.gui;
 
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.awt.Graphics;
-import java.awt.Panel;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Observable;
 import java.util.Observer;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLayeredPane;
-import javax.swing.JPanel;
 
 import DomaineVoiture.Voiture;
 

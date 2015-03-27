@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.Timer;
 
+import AppliSimu.gui.IHMVoiture;
 import DomaineVoiture.Voiture;
 
 public class ProtoSimu {
