@@ -1,6 +1,8 @@
 package DomaineRoute;
 
-public class Route {
+import java.util.Observable;
+
+public class Route extends Observable {
 	private int posX;
 	private int posY;
 	private int width;
@@ -28,4 +30,9 @@ public class Route {
 	public int getHeight(){
 		return this.height;
 	}
+
+    private void notificationObservateur() {
+        this.setChanged();
+        this.notifyObservers();
+    }
 }

@@ -17,13 +17,12 @@ public class ProtoSimu {
 	public static void main(String[] args) {
 
 		final Voiture maVoiture = new Voiture (100, 0, 10);
-		final Route routeHorizontale = new Route(0, 0, 0, 0);
-		final Route routeVerticale  = new Route(0, 0, 0, 0);
-		
-		IHMVoiture monTriangle = new IHMVoiture(maVoiture);
-		IHMRoute routeH = new IHMRoute(routeHorizontale);
-		IHMRoute routeV = new IHMRoute(routeVerticale);
-		
+		final Route routeHorizontale = new Route(0, 280, 500, 40);
+
+		IHMRoute route = new IHMRoute(routeHorizontale);
+
+        IHMVoiture monTriangle = new IHMVoiture(maVoiture, route);
+
 		Timer timerAvancer = new Timer(dureeUneSecondeEnMilliSecondes, new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {

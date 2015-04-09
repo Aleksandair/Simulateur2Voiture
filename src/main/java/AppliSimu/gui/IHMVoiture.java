@@ -7,6 +7,7 @@ import java.util.Observer;
 
 import javax.swing.JFrame;
 
+import DomaineRoute.Route;
 import DomaineVoiture.Voiture;
 
 public class IHMVoiture extends JFrame implements Observer{
@@ -14,6 +15,7 @@ public class IHMVoiture extends JFrame implements Observer{
 	private double paramatreConversionMetresPixels = 0.5;
 	private Voiture maVoiture;
 	private CommandeVoiture maCommandeVoiture;
+    private IHMRoute ihmRoute;
 	
 	private void initGraphique() {
 		this.setTitle("Simulateur de Voiture");
@@ -24,9 +26,10 @@ public class IHMVoiture extends JFrame implements Observer{
 		this.setVisible(true);
 	}
 	
-	public IHMVoiture(Voiture maVoiture) {
+	public IHMVoiture(Voiture maVoiture, IHMRoute ihmRoute) {
 		super();
 		this.maVoiture = maVoiture;
+        this.ihmRoute = ihmRoute;
 		maVoiture.addObserver(this);
 		initGraphique();
 	}
@@ -48,7 +51,13 @@ public class IHMVoiture extends JFrame implements Observer{
 	@Override
 	public void paint(Graphics contexteGraphique) {
 		super.paint(contexteGraphique);
-		contexteGraphique.setColor(Color.red);
+
+        //dessine la route
+        contexteGraphique.setColor(Color.gray);
+        ihmRoute.dessinerRoute(contexteGraphique);
+
+		//dessine la voiture
+        contexteGraphique.setColor(Color.red);
 		dessinerVoiture(contexteGraphique);
 	}
 
