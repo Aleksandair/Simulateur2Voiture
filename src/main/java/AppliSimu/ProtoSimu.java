@@ -17,7 +17,7 @@ public class ProtoSimu {
 	public static void main(String[] args) {
 
 		final Voiture maVoiture = new Voiture (100, 0, 10);
-		final Route routeHorizontale = new Route(0, 280, 500, 40);
+		final Route routeHorizontale = new Route(0, 280, 500, 50);
 
 		IHMRoute route = new IHMRoute(routeHorizontale);
 

@@ -70,5 +70,14 @@ public class Voiture extends Observable {
 	return directionEnDegres;
 	}
 
-	
+
+    public void tourneADroite() {
+        directionEnDegres += 10;
+        directionEnDegres %= 360;
+    }
+
+    public void tourneAGauche() {
+        directionEnDegres -= 10;
+        directionEnDegres %= 360;
+    }
 }

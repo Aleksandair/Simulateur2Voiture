@@ -77,5 +77,23 @@ public class TestVoiture {
 		assertEquals(0, maVoiture.getX());
 		
 	}
-	
+
+    @Test
+    public void testTourneADroite() {
+
+        maVoiture.setDirection(0);
+        maVoiture.tourneADroite();
+        assertEquals(10, maVoiture.getDirection());
+
+    }
+
+    @Test
+    public void testTourneAGauche() {
+
+        maVoiture.setDirection(0);
+        maVoiture.tourneAGauche();
+        assertEquals(-10, maVoiture.getDirection());
+
+    }
+
 }

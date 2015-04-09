@@ -67,5 +67,7 @@ public class IHMVoiture extends JFrame implements Observer{
 		int xPixel = calculerPositionPixels(xMetres);
 		contexteGraphique.fillRect(xPixel, 300, 30, 15);
 	}
+
+
 	
 }
